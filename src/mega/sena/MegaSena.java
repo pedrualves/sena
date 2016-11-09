@@ -2,17 +2,14 @@ package mega.sena;
 
 import java.util.Random;
 
+//objeto para realizar os sorteios
 public class MegaSena {
 
-	private final int m[][] = new int[3000][6];
-	private final int v[] = new int[65];
-	private final Random gerador = new Random();
+	private int m[][] = new int[3000][6];
+	private int v[] = new int[65];
+	private Random gerador = new Random();
 
-	public void sortear() {
-
-	}
-
-	public void sortear3000() {
+	public int[][] sortear3000() {
 		// faz o sorteio de 6 digitos e acrescenta a matriz
 		for (int i = 0; i < 3000; i++) {
 			for (int j = 1; j <= 60; j++)
@@ -46,6 +43,7 @@ public class MegaSena {
 			System.out.println("Sorteio [" + (i + 1) + "]: " + m[i][0] + " " + m[i][1] + " " + m[i][2] + " " + m[i][3]
 					+ " " + m[i][4] + " " + m[i][5]);
 		}
+		return m;
 
 	}
 
